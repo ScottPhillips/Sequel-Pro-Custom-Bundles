@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>author</key>
+	<string>Scott Phillips</string>
+	<key>category</key>
+	<string></string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+$input = "";
+
+$fp = fopen("php://stdin", "r");
+while ( $line = fgets($fp, 1024) ) {
+	$input .= $line;
+	}
+fclose($fp);
+
+echo '&lt;pre&gt;';	
+print_r(json_decode($input, true));
+echo '&lt;/pre&gt;';
+
+?&gt;</string>
+	<key>contact</key>
+	<string>uggcf://tvguho.pbz/FpbggCuvyyvcf/Frdhry-Ceb-Phfgbz-Ohaqyrf</string>
+	<key>description</key>
+	<string>Converts JSON stored in a column into a somewhat more readable format.</string>
+	<key>input</key>
+	<string>entirecontent</string>
+	<key>internalKeyEquivalent</key>
+	<dict>
+		<key>characters</key>
+		<string>A</string>
+		<key>keyCode</key>
+		<integer>0</integer>
+		<key>modifierFlags</key>
+		<integer>1179648</integer>
+	</dict>
+	<key>keyEquivalent</key>
+	<string>$@A</string>
+	<key>name</key>
+	<string>Decode JSON</string>
+	<key>output</key>
+	<string>showashtml</string>
+	<key>scope</key>
+	<string>inputfield</string>
+	<key>tooltip</key>
+	<string>This will decode Json into an array, so you can read it more easily.</string>
+	<key>trigger</key>
+	<string>none</string>
+	<key>uuid</key>
+	<string>C77EA4E0-800F-45E8-97B3-88183235362C</string>
+</dict>
+</plist>
